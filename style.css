@@ -95,7 +95,9 @@ body {
   font-size: 5rem;
   font-weight: bold;
 }
-
+.home .acara {
+  color: #222831;
+}
 .home h3 {
   color: #444;
   font-size: 1.5rem;
