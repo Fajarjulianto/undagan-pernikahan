@@ -8,7 +8,7 @@
 body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
-  min-height: 4000px;
+  /* min-height: 4000px; */
 }
 
 .hero::before {
@@ -122,6 +122,14 @@ body {
 
 .home .couple img {
   width: 100%;
+  max-width: 200px;
+  /* height: 200px; */
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* TAMBAHKAN baris ini (Kunci agar tetap bulat sempurna) */
+  object-fit: cover; /* Agar gambar di-crop rapi */
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
 .home .love {
@@ -363,7 +371,52 @@ footer li {
   display: inline;
   margin: 0.5rem;
 }
+/* Styling Ayat Al-Quran */
+.ayat {
+  background-color: #f8f9fa; /* Warna background terang/netral */
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  color: #444;
+}
 
+.quran-surah {
+  font-family: "Sacramento", cursive;
+  font-size: 3.5rem; /* Ukuran font judul surat */
+  font-weight: bold;
+  color: var(--biru); /* Mengikuti warna tema utama */
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.quran-arabic {
+  font-family: "Amiri", serif; /* Pastikan font Amiri sudah diload di HTML */
+  font-size: 2.2rem;
+  line-height: 2.2;
+  margin-bottom: 2rem;
+  color: #222; /* Warna teks arab agak gelap agar terbaca */
+}
+
+.quran-arti {
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 576px) {
+  .ayat {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .quran-surah {
+    font-size: 2.5rem;
+  }
+  .quran-arabic {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
 /* Media Query */
 
 /* Extra Large */
